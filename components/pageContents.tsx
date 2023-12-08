@@ -4,6 +4,10 @@ import React, { useContext, useEffect } from "react";
 export default function PageContents({ page }: { page: number }) {
   const { loading, setLoading } = useContext(LoadingContext);
 
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <div>
       <h1>Page {page}</h1>
