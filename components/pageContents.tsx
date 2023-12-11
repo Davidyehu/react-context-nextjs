@@ -16,7 +16,7 @@ export default function PageContents({ page }: { page: number }) {
         onClick={() => {
           setLoading(true);
           window.location.href = `/page${page === 1 ? 2 : 1}/`;
-          window.onunload = () => {
+          window.onpageshow = () => {
             setLoading(false);
           };
         }}
